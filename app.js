@@ -3,7 +3,7 @@ const app = express();
 const todoRoutes = require('./routes/todo.js');
 const port = 3500;
 
-
+app.use(express.json());
 
 app.use('/todos', todoRoutes);
 app.set('view engine', 'ejs');
