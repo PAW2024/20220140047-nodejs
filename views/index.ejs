@@ -1,5 +1,80 @@
-<div class="container">
-    <h1>Welcome to the Home Page!</h1>
-    <p>This is the home page of our application.</p>
-    <a href="/contact" class="btn btn-primary">Go to Contact Page</a>
-</div>
+ <div class="home-page">
+    <div class="carousel">
+        <div class="carousel-item active">
+            <img src="images/burung.png" alt="Burung">
+            <div class="carousel-text">
+                <h1>Welcome <br>to Our Pet <br>Supply Shop</h1>
+                <a href="#" class="btn">Start Shopping</a>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <img src="images/anjing.png" alt="Anjing">
+            <div class="carousel-text">
+                <h1>Welcome <br>to Our Pet <br>Supply Shop</h1>
+                <a href="#" class="btn">Start Shopping</a>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <img src="images/kucing.png" alt="Kucing">
+            <div class="carousel-text">
+                <h1>Welcome <br>to Our Pet <br>Supply Shop</h1>
+                <a href="#" class="btn">Start Shopping</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="card" style="background-image: url('images/kucing.png');">
+            <div class="card-text">
+                <h2>Kucing</h2>
+                <p>Beli sekarang juga!</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('images/anjing.png');">
+            <div class="card-text">
+                <h2>Anjing</h2>
+                <p>Beli sekarang juga!</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('images/burung.png');">
+            <div class="card-text">
+                <h2>Burung</h2>
+                <p>Beli sekarang juga!</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('images/hamster.png');">
+            <div class="card-text">
+                <h2>Hamster</h2>
+                <p>Beli sekarang juga!</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('images/kelinci.png');">
+            <div class="card-text">
+                <h2>Kelinci</h2>
+                <p>Beli sekarang juga!</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pet Supply Shop. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const items = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        function showNextSlide() {
+            items[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % items.length;
+            items[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextSlide, 3000); // Ganti gambar setiap 3 detik
+    </script>
+ </div>
